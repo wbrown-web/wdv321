@@ -1,0 +1,191 @@
+{
+  "name": "Crockpot Chili",
+  "servings": 6,
+  "image": "images/chili.jpg",
+  "prepTime": "25 minute prep - 6 hour cook time",
+  "difficulty": "3",
+  "ingredients": [{
+      "name": "Cooking Oil",
+      "quantity": 2,
+      "unit": "tbsps",
+      "optional": false
+    },
+    {
+      "name": "Chopped Onion",
+      "quantity": 1,
+      "unit": "cups",
+      "optional": false
+    },
+    {
+      "name": "Chopped Peppers",
+      "quantity": 1,
+      "unit": "cups",
+      "optional": false
+    },
+    {
+      "name": "Chili Powder",
+      "quantity": 4,
+      "unit": "tbsps",
+      "optional": false
+    },
+    {
+      "name": "Hot Chili Powder",
+      "quantity": 1,
+      "unit": "tsps",
+      "optional": true
+    },
+    {
+      "name": "Ground Beef/Chicken",
+      "quantity": 1,
+      "unit": "lb(s)",
+      "optional": false
+    },
+    {
+      "name": "Red Beans",
+      "quantity": 2,
+      "unit": "cans",
+      "optional": false
+    },
+    {
+      "name": "Kidney Beans",
+      "quantity": 2,
+      "unit": "cans",
+      "optional": false
+    },
+    {
+      "name": "Tomato Puree",
+      "quantity": 2,
+      "unit": "cans",
+      "optional": false
+    },
+    {
+      "name": "Tomato Sauce",
+      "quantity": 2,
+      "unit": "cans",
+      "optional": false
+    },
+    {
+      "name": "Shredded Cheese",
+      "quantity": 1,
+      "unit": "cups",
+      "optional": true
+    },
+    {
+      "name": "Sour Cream",
+      "quantity": 0.5,
+      "unit": "cups",
+      "optional": true
+    }
+  ],
+  "instructionsHalf": [{
+    "step": 1,
+    "instruction": "Heat cooking oil in 1 quart skillet."
+  },
+  {
+    "step": 2,
+    "instruction": "Saute onions and peppers for 5 minutes."
+  },
+  {
+    "step": 3,
+    "instruction": "Add spices and stir for 30 seconds."
+  },
+  {
+    "step": 4,
+    "instruction":"Add meat and cook until browned. Approximately 15 minutes."
+  },
+  {
+    "step": 5,
+    "instruction":"Pour contents of skillet into 1.5 quart crock pot."
+  },
+  {
+    "step": 6,
+    "instruction":"Rinse beans and place in crockpot."
+  },
+  {
+    "step": 7 ,
+    "instruction":"Open and pour Tomato puree and sauce into crock pot."
+  },
+  {
+    "step": 8,
+    "instruction":"Cover crockpot and cook on low for 6 hours."
+  },
+  {
+    "step": 9,
+    "instruction":"Serve into individual bowls and top with sour cream and cheese."
+  }
+  ],
+  "instructionsNormal": [{
+      "step": 1,
+      "instruction": "Heat cooking oil in 2 quart skillet."
+    },
+    {
+      "step": 2,
+      "instruction": "Saute onions and peppers for 5 minutes."
+    },
+    {
+      "step": 3,
+      "instruction": "Add spices and stir for 30 seconds."
+    },
+    {
+      "step": 4,
+      "instruction":"Add meat and cook until browned. Approximately 15 minutes."
+    },
+    {
+      "step": 5,
+      "instruction":"Pour contents of skillet into 3 quart crock pot."
+    },
+    {
+      "step": 6,
+      "instruction":"Rinse beans and place in crockpot."
+    },
+    {
+      "step": 7 ,
+      "instruction":"Open and pour Tomato puree and sauce into crock pot."
+    },
+    {
+      "step": 8,
+      "instruction":"Cover crockpot and cook on low for 6 hours."
+    },
+    {
+      "step": 9,
+      "instruction":"Serve into individual bowls and top with sour cream and cheese."
+    }
+  ],
+  "instructionsDouble": [{
+    "step": 1,
+    "instruction": "Heat cooking oil in 4 quart skillet."
+  },
+  {
+    "step": 2,
+    "instruction": "Saute onions and peppers for 5 minutes."
+  },
+  {
+    "step": 3,
+    "instruction": "Add spices and stir for 30 seconds."
+  },
+  {
+    "step": 4,
+    "instruction":"Add meat and cook until browned. Approximately 15 minutes."
+  },
+  {
+    "step": 5,
+    "instruction":"Pour contents of skillet into 6 quart crock pot."
+  },
+  {
+    "step": 6,
+    "instruction":"Rinse beans and place in crockpot."
+  },
+  {
+    "step": 7 ,
+    "instruction":"Open and pour Tomato puree and sauce into crock pot."
+  },
+  {
+    "step": 8,
+    "instruction":"Cover crockpot and cook on low for 6 hours."
+  },
+  {
+    "step": 9,
+    "instruction":"Serve into individual bowls and top with sour cream and cheese."
+  }
+  ]
+}

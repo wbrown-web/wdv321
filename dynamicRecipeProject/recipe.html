@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Dynamic Recipe Project</title>
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script>
+    //*** Functionality ***//
+    $(document).ready(function() {
+
+      $("#recipes").change(function() {
+        var selectedValue = $(this).val();
+
+        if (selectedValue == "crockpotChili") {
+          $.getJSON("recipes/crockpotChili.json", function(data) {
+            $("#recipeName").html(data.name);
+            $("#recipeImage").attr('src', data.image);
+            $("#recipeServings").html(data.servings);
+            $("#recipePrepTime").html(data.prepTime);
+            $("#recipeDifficulty").html(data.difficulty);
+            //*** Recipe Size Change and Display ***//
+            $("#halfRecipeSelect, #normalRecipeSelect, #doubleRecipeSelect").change(function() {
+              var recipeSize = $(this).val();
+              $("#ingredients").html("");
+              $("instructions").html("");
+              if (recipeSize == "half") {
+                //*** Grabs The Ingredients and Halfs the Quantity***//
+                for (var i = 0; i < data.ingredients.length; i++) {
+                  if (data.ingredients[i].optional === true) {
+                    $("#ingredients").append("<li>" + data.ingredients[i].quantity * 0.5 + " " + data.ingredients[i].unit + " " + data.ingredients[i].name + " (Optional)</li>");
+                  } else {
+                    $("#ingredients").append("<li>" + data.ingredients[i].quantity * 0.5 + " " + data.ingredients[i].unit + " " + data.ingredients[i].name + " </li>");
+                  }
+                }
+                //*** Grabs The Half Instructions ***//
+                console.log(data.instructionsHalf);
+                for (var x = 0; x < data.instructionsHalf.length; x++) {
+                  $("#instructions").append("<h4>" + "Step " + data.instructionsHalf[x].step + "</h4>" + "<p>" + data.instructionsHalf[x].instruction + "</p>");
+                }
+              } else if (recipeSize == "normal") {
+                //*** Grabs The Normal Ingredient List ***//
+                for (var i = 0; i < data.ingredients.length; i++) {
+                  if (data.ingredients[i].optional === true) {
+                    $("#ingredients").append("<li>" + data.ingredients[i].quantity + " " + data.ingredients[i].unit + " " + data.ingredients[i].name + " (Optional)</li>");
+                  } else {
+                    $("#ingredients").append("<li>" + data.ingredients[i].quantity + " " + data.ingredients[i].unit + " " + data.ingredients[i].name + " </li>");
+                  }
+                }
+                //*** Grabs The Normal Instructions ***//
+                for (var x = 0; x < data.instructionsNormal.length; x++) {
+                  $("#instructions").append("<h4>" + "Step " + data.instructionsNormal[x].step + "</h4>" + "<p>" + data.instructionsNormal[x].instruction + "</p>");
+                }
+              } else if (recipeSize == "double") {
+                //*** Grabs Ingredient List and Doubles the Quantity ***//
+                for (var i = 0; i < data.ingredients.length; i++) {
+                  if (data.ingredients[i].optional === true) {
+                    $("#ingredients").append("<li>" + data.ingredients[i].quantity * 2 + " " + data.ingredients[i].unit + " " + data.ingredients[i].name + " (Optional)</li>");
+                  } else {
+                    $("#ingredients").append("<li>" + data.ingredients[i].quantity * 2 + " " + data.ingredients[i].unit + " " + data.ingredients[i].name + " </li>");
+                  }
+                }
+                //*** Grabs The Double Instructions ***//
+                for (var x = 0; x < data.instructionsDouble.length; x++) {
+                  $("#instructions").append("<h4>" + "Step " + data.instructionsDouble[x].step + "</h4>" + "<p>" + data.instructionsDouble[x].instruction + "</p>");
+                }
+              }
+            });
+
+          });
+        };
+      });
+    });
+  </script>
+  <style>
+    #recipeCard {}
+  </style>
+</head>
+</body>
+<p>Recipe List</p>
+<p>
+  <select name="recipes" id="recipes">
+    <option value="select">Select A Recipe</option>
+    <option value="crockpotChili">Crockpot Chili</option>
+    <option value="item2">Item 2</option>
+    <option value="item3">Item 3</option>
+  </select>
+</p>
+<div id="recipeCard">
+  <div id="recipeHeading">
+    <h1><span id="recipeName"></span></h1>
+    <img src="" id="recipeImage">
+    <p>Servings: <span id="recipeServings"></span></p>
+    <p>Avg prep/cooking time: <span id="recipePrepTime"></span></p>
+    <p>Recipe Difficulty: <span id="recipeDifficulty"></span></p>
+    <button id="ingredientShow">Show Ingredients</button>
+    <button id="instructShow">Preparation</button>
+  </div>
+  <div id="recipeIngredients">
+    <h3>Select Recipe Size</h3>
+    <p>
+      <input type="radio" name="recipeSizeSelect" value="half" id="halfRecipeSelect">
+      <label for="halfRecipeSelect">Half Recipe</label>
+      <input type="radio" name="recipeSizeSelect" value="normal" id="normalRecipeSelect">
+      <label for="normalRecipeSelect">Normal Recipe</label>
+      <input type="radio" name="recipeSizeSelect" value="double" id="doubleRecipeSelect">
+      <label for="doubleRecipeSelect">Double Recipe</label>
+    </p>
+    <p>
+      <ul><span id="ingredients"></span></ul>
+    </p>
+  </div>
+  <div id="reciplePrepInstructions">
+    <p><span id="instructions"></span></p>
+  </div>
+</div>
+
+<body>
+
+</html>
