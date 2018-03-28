@@ -1,0 +1,77 @@
+{
+  "name": "Fettuccini Alfredo",
+  "servings": 8,
+  "image": "images/fettuccini.jpg",
+  "prepTime": "30 minutes",
+  "difficulty": "2",
+  "ingredients": [{
+      "name": "Dry Fettuccine Pasta",
+      "quantity": 1,
+      "unit": "lbs",
+      "optional": false
+    },
+    {
+      "name": "Heavy Whipping Cream",
+      "quantity": 3,
+      "unit": "pints",
+      "optional": false
+    },
+    {
+      "name": "Butter",
+      "quantity": 4,
+      "unit": "tbsps",
+      "optional": false
+    },
+    {
+      "name": "Ground Nutmeg",
+      "quantity": 1,
+      "unit": "pinch",
+      "optional": false
+    },
+    {
+      "name": "Ground Black Pepper",
+      "quantity": 2,
+      "unit": "tsps",
+      "optional": true
+    }
+  ],
+  "instructionsHalf": [{
+      "step": 1,
+      "instruction": "Cook pasta according to directions on package. Drain and toss with one tablespoon of butter, cover and set aside."
+    },
+    {
+      "step": 2,
+      "instruction": "In a medium sauce pan over low heat, heat cream and 1.5 tablespoons of butter, stirring constantly. When cream begins to simmer mix in a small amounts of Romano cheese, stirring constantly, until all cheese is added and sauce has reduced. It should be thick and easily cover the back of a spoon."
+    },
+    {
+      "step": 3,
+      "instruction": "Stir in nutmeg and black pepper. Toss with warm fettuccini and serve."
+    }
+  ],
+  "instructionsNormal": [{
+      "step": 1,
+      "instruction": "Cook pasta according to directions on package. Drain and toss with one tablespoon of butter, cover and set aside."
+    },
+    {
+      "step": 2,
+      "instruction": "In a medium sauce pan over low heat, heat cream and 3 tablespoons of butter, stirring constantly. When cream begins to simmer mix in a small amounts of Romano cheese, stirring constantly, until all cheese is added and sauce has reduced. It should be thick and easily cover the back of a spoon."
+    },
+    {
+      "step": 3,
+      "instruction": "Stir in nutmeg and black pepper. Toss with warm fettuccini and serve."
+    }
+  ],
+  "instructionsDouble": [{
+      "step": 1,
+      "instruction": "Cook pasta according to directions on package. Drain and toss with one tablespoon of butter, cover and set aside."
+    },
+    {
+      "step": 2,
+      "instruction": "In a medium sauce pan over low heat, heat cream and 6 tablespoons of butter, stirring constantly. When cream begins to simmer mix in a small amounts of Romano cheese, stirring constantly, until all cheese is added and sauce has reduced. It should be thick and easily cover the back of a spoon."
+    },
+    {
+      "step": 3,
+      "instruction": "Stir in nutmeg and black pepper. Toss with warm fettuccini and serve."
+    }
+  ]
+}

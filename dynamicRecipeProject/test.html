@@ -14,7 +14,7 @@
         //*** Reset Ingredients and Instructions on Change ***//
         $("#ingredients").html("");
         $("#instructions").html("");
-        $("#recipeServings").html("");
+
         if (selectedValue == "crockpotChili") {
           $.getJSON("recipes/crockpotChili.json", function(data) {
             $("#recipeName").html(data.name);
@@ -27,10 +27,7 @@
               var recipeSize = $(this).val();
               $("#ingredients").html("");
               $("#instructions").html("");
-              $("#recipeServings").html("");
               if (recipeSize == "half") {
-                //*** Adjust Serving Size ***//
-                $("#recipeServings").html(data.servings*0.5);
                 //*** Grabs The Ingredients and Halfs the Quantity***//
                 for (var i = 0; i < data.ingredients.length; i++) {
                   if (data.ingredients[i].optional === true) {
@@ -44,8 +41,6 @@
                   $("#instructions").append("<h4>" + "Step " + data.instructionsHalf[x].step + "</h4>" + "<p>" + data.instructionsHalf[x].instruction + "</p>");
                 }
               } else if (recipeSize == "normal") {
-                //*** Adjust Serving Size ***//
-                $("#recipeServings").html(data.servings);
                 //*** Grabs The Normal Ingredient List ***//
                 for (var i = 0; i < data.ingredients.length; i++) {
                   if (data.ingredients[i].optional === true) {
@@ -59,130 +54,6 @@
                   $("#instructions").append("<h4>" + "Step " + data.instructionsNormal[x].step + "</h4>" + "<p>" + data.instructionsNormal[x].instruction + "</p>");
                 }
               } else if (recipeSize == "double") {
-                //*** Adjust Serving Size ***//
-                $("#recipeServings").html(data.servings*2);
-                //*** Grabs Ingredient List and Doubles the Quantity ***//
-                for (var i = 0; i < data.ingredients.length; i++) {
-                  if (data.ingredients[i].optional === true) {
-                    $("#ingredients").append("<li>" + data.ingredients[i].quantity * 2 + " " + data.ingredients[i].unit + " " + data.ingredients[i].name + " (Optional)</li>");
-                  } else {
-                    $("#ingredients").append("<li>" + data.ingredients[i].quantity * 2 + " " + data.ingredients[i].unit + " " + data.ingredients[i].name + " </li>");
-                  }
-                }
-                //*** Grabs The Double Instructions ***//
-                for (var x = 0; x < data.instructionsDouble.length; x++) {
-                  $("#instructions").append("<h4>" + "Step " + data.instructionsDouble[x].step + "</h4>" + "<p>" + data.instructionsDouble[x].instruction + "</p>");
-                }
-              }
-            });
-
-          });
-        } else if (selectedValue == "fettuccini") {
-          $.getJSON("recipes/fettucciniAlfredo.json", function(data) {
-            $("#recipeName").html(data.name);
-            $("#recipeImage").attr('src', data.image);
-            $("#recipeServings").html(data.servings);
-            $("#recipePrepTime").html(data.prepTime);
-            $("#recipeDifficulty").html(data.difficulty);
-            //*** Recipe Size Change and Display ***//
-            $("#halfRecipeSelect, #normalRecipeSelect, #doubleRecipeSelect").change(function() {
-              var recipeSize = $(this).val();
-              $("#ingredients").html("");
-              $("#instructions").html("");
-              if (recipeSize == "half") {
-                //*** Adjust Serving Size ***//
-                $("#recipeServings").html(data.servings*0.5);
-                //*** Grabs The Ingredients and Halfs the Quantity***//
-                for (var i = 0; i < data.ingredients.length; i++) {
-                  if (data.ingredients[i].optional === true) {
-                    $("#ingredients").append("<li>" + data.ingredients[i].quantity * 0.5 + " " + data.ingredients[i].unit + " " + data.ingredients[i].name + " (Optional)</li>");
-                  } else {
-                    $("#ingredients").append("<li>" + data.ingredients[i].quantity * 0.5 + " " + data.ingredients[i].unit + " " + data.ingredients[i].name + " </li>");
-                  }
-                }
-                //*** Grabs The Half Instructions ***//
-                for (var x = 0; x < data.instructionsHalf.length; x++) {
-                  $("#instructions").append("<h4>" + "Step " + data.instructionsHalf[x].step + "</h4>" + "<p>" + data.instructionsHalf[x].instruction + "</p>");
-                }
-              } else if (recipeSize == "normal") {
-                //*** Adjust Serving Size ***//
-                $("#recipeServings").html(data.servings);
-                //*** Grabs The Normal Ingredient List ***//
-                for (var i = 0; i < data.ingredients.length; i++) {
-                  if (data.ingredients[i].optional === true) {
-                    $("#ingredients").append("<li>" + data.ingredients[i].quantity + " " + data.ingredients[i].unit + " " + data.ingredients[i].name + " (Optional)</li>");
-                  } else {
-                    $("#ingredients").append("<li>" + data.ingredients[i].quantity + " " + data.ingredients[i].unit + " " + data.ingredients[i].name + " </li>");
-                  }
-                }
-                //*** Grabs The Normal Instructions ***//
-                for (var x = 0; x < data.instructionsNormal.length; x++) {
-                  $("#instructions").append("<h4>" + "Step " + data.instructionsNormal[x].step + "</h4>" + "<p>" + data.instructionsNormal[x].instruction + "</p>");
-                }
-              } else if (recipeSize == "double") {
-                //*** Adjust Serving Size ***//
-                $("#recipeServings").html(data.servings*2);
-                //*** Grabs Ingredient List and Doubles the Quantity ***//
-                for (var i = 0; i < data.ingredients.length; i++) {
-                  if (data.ingredients[i].optional === true) {
-                    $("#ingredients").append("<li>" + data.ingredients[i].quantity * 2 + " " + data.ingredients[i].unit + " " + data.ingredients[i].name + " (Optional)</li>");
-                  } else {
-                    $("#ingredients").append("<li>" + data.ingredients[i].quantity * 2 + " " + data.ingredients[i].unit + " " + data.ingredients[i].name + " </li>");
-                  }
-                }
-                //*** Grabs The Double Instructions ***//
-                for (var x = 0; x < data.instructionsDouble.length; x++) {
-                  $("#instructions").append("<h4>" + "Step " + data.instructionsDouble[x].step + "</h4>" + "<p>" + data.instructionsDouble[x].instruction + "</p>");
-                }
-              }
-            });
-
-          });
-        } else if (selectedValue == "chickenParm") {
-          $.getJSON("recipes/chickenParm.json", function(data) {
-            $("#recipeName").html(data.name);
-            $("#recipeImage").attr('src', data.image);
-            $("#recipeServings").html(data.servings);
-            $("#recipePrepTime").html(data.prepTime);
-            $("#recipeDifficulty").html(data.difficulty);
-            //*** Recipe Size Change and Display ***//
-            $("#halfRecipeSelect, #normalRecipeSelect, #doubleRecipeSelect").change(function() {
-              var recipeSize = $(this).val();
-              $("#ingredients").html("");
-              $("#instructions").html("");
-              if (recipeSize == "half") {
-                //*** Adjust Serving Size ***//
-                $("#recipeServings").html(data.servings*0.5);
-                //*** Grabs The Ingredients and Halfs the Quantity***//
-                for (var i = 0; i < data.ingredients.length; i++) {
-                  if (data.ingredients[i].optional === true) {
-                    $("#ingredients").append("<li>" + data.ingredients[i].quantity * 0.5 + " " + data.ingredients[i].unit + " " + data.ingredients[i].name + " (Optional)</li>");
-                  } else {
-                    $("#ingredients").append("<li>" + data.ingredients[i].quantity * 0.5 + " " + data.ingredients[i].unit + " " + data.ingredients[i].name + " </li>");
-                  }
-                }
-                //*** Grabs The Half Instructions ***//
-                for (var x = 0; x < data.instructionsHalf.length; x++) {
-                  $("#instructions").append("<h4>" + "Step " + data.instructionsHalf[x].step + "</h4>" + "<p>" + data.instructionsHalf[x].instruction + "</p>");
-                }
-              } else if (recipeSize == "normal") {
-                //*** Adjust Serving Size ***//
-                $("#recipeServings").html(data.servings);
-                //*** Grabs The Normal Ingredient List ***//
-                for (var i = 0; i < data.ingredients.length; i++) {
-                  if (data.ingredients[i].optional === true) {
-                    $("#ingredients").append("<li>" + data.ingredients[i].quantity + " " + data.ingredients[i].unit + " " + data.ingredients[i].name + " (Optional)</li>");
-                  } else {
-                    $("#ingredients").append("<li>" + data.ingredients[i].quantity + " " + data.ingredients[i].unit + " " + data.ingredients[i].name + " </li>");
-                  }
-                }
-                //*** Grabs The Normal Instructions ***//
-                for (var x = 0; x < data.instructionsNormal.length; x++) {
-                  $("#instructions").append("<h4>" + "Step " + data.instructionsNormal[x].step + "</h4>" + "<p>" + data.instructionsNormal[x].instruction + "</p>");
-                }
-              } else if (recipeSize == "double") {
-                //*** Adjust Serving Size ***//
-                $("#recipeServings").html(data.servings*2);
                 //*** Grabs Ingredient List and Doubles the Quantity ***//
                 for (var i = 0; i < data.ingredients.length; i++) {
                   if (data.ingredients[i].optional === true) {
@@ -201,38 +72,94 @@
           });
         }
 
+        else if (selectedValue == "fettuccini") {
+          $.getJSON("recipes/fettucciniAlfredo.json", function(data) {
+            $("#recipeName").html(data.name);
+            $("#recipeImage").attr('src', data.image);
+            $("#recipeServings").html(data.servings);
+            $("#recipePrepTime").html(data.prepTime);
+            $("#recipeDifficulty").html(data.difficulty);
+            //*** Recipe Size Change and Display ***//
+            $("#halfRecipeSelect, #normalRecipeSelect, #doubleRecipeSelect").change(function() {
+              var recipeSize = $(this).val();
+              $("#ingredients").html("");
+              $("#instructions").html("");
+              if (recipeSize == "half") {
+                //*** Grabs The Ingredients and Halfs the Quantity***//
+                for (var i = 0; i < data.ingredients.length; i++) {
+                  if (data.ingredients[i].optional === true) {
+                    $("#ingredients").append("<li>" + data.ingredients[i].quantity * 0.5 + " " + data.ingredients[i].unit + " " + data.ingredients[i].name + " (Optional)</li>");
+                  } else {
+                    $("#ingredients").append("<li>" + data.ingredients[i].quantity * 0.5 + " " + data.ingredients[i].unit + " " + data.ingredients[i].name + " </li>");
+                  }
+                }
+                //*** Grabs The Half Instructions ***//
+                for (var x = 0; x < data.instructionsHalf.length; x++) {
+                  $("#instructions").append("<h4>" + "Step " + data.instructionsHalf[x].step + "</h4>" + "<p>" + data.instructionsHalf[x].instruction + "</p>");
+                }
+              } else if (recipeSize == "normal") {
+                //*** Grabs The Normal Ingredient List ***//
+                for (var i = 0; i < data.ingredients.length; i++) {
+                  if (data.ingredients[i].optional === true) {
+                    $("#ingredients").append("<li>" + data.ingredients[i].quantity + " " + data.ingredients[i].unit + " " + data.ingredients[i].name + " (Optional)</li>");
+                  } else {
+                    $("#ingredients").append("<li>" + data.ingredients[i].quantity + " " + data.ingredients[i].unit + " " + data.ingredients[i].name + " </li>");
+                  }
+                }
+                //*** Grabs The Normal Instructions ***//
+                for (var x = 0; x < data.instructionsNormal.length; x++) {
+                  $("#instructions").append("<h4>" + "Step " + data.instructionsNormal[x].step + "</h4>" + "<p>" + data.instructionsNormal[x].instruction + "</p>");
+                }
+              } else if (recipeSize == "double") {
+                //*** Grabs Ingredient List and Doubles the Quantity ***//
+                for (var i = 0; i < data.ingredients.length; i++) {
+                  if (data.ingredients[i].optional === true) {
+                    $("#ingredients").append("<li>" + data.ingredients[i].quantity * 2 + " " + data.ingredients[i].unit + " " + data.ingredients[i].name + " (Optional)</li>");
+                  } else {
+                    $("#ingredients").append("<li>" + data.ingredients[i].quantity * 2 + " " + data.ingredients[i].unit + " " + data.ingredients[i].name + " </li>");
+                  }
+                }
+                //*** Grabs The Double Instructions ***//
+                for (var x = 0; x < data.instructionsDouble.length; x++) {
+                  $("#instructions").append("<h4>" + "Step " + data.instructionsDouble[x].step + "</h4>" + "<p>" + data.instructionsDouble[x].instruction + "</p>");
+                }
+              }
+            });
+
+          });
+        };
+
       });
     });
-    //*** Ingredients Show and Hide ***//
-    function showIngredients() {
+//*** Ingredients Show and Hide ***//
+    function showIngredients(){
       $("#recipeIngredients").show();
       $("#ingredientShow").hide();
     }
 
-    function hideIngredients() {
+    function hideIngredients(){
       $("#recipeIngredients").hide();
       $("#ingredientShow").show();
     }
 
-    //*** Instructions Show and Hide ***//
-    function showInstructions() {
+//*** Instructions Show and Hide ***//
+      function showInstructions(){
       $("#reciplePrepInstructions").show();
       $("#instructShow").hide();
-    }
+      }
 
-    function hideInstructions() {
+      function hideInstructions(){
       $("#reciplePrepInstructions").hide();
       $("#instructShow").show();
-    }
+      }
+
   </script>
   <style>
     #recipeCard {}
-
-    #recipeIngredients {
+    #recipeIngredients{
       display: none;
     }
-
-    #reciplePrepInstructions {
+    #reciplePrepInstructions{
       display: none;
     }
   </style>
@@ -244,7 +171,7 @@
     <option value="select">Select A Recipe</option>
     <option value="crockpotChili">Crockpot Chili</option>
     <option value="fettuccini">Fettuccini Alfredo</option>
-    <option value="chickenParm">Chicken Parmesan</option>
+    <option value="item3">Item 3</option>
   </select>
 </p>
 <div id="recipeCard">
@@ -270,7 +197,7 @@
     <p>
       <ul><span id="ingredients"></span></ul>
     </p>
-    <button id="ingredientHide" onclick="hideIngredients()">Hide Ingredients</button>
+      <button id="ingredientHide" onclick="hideIngredients()">Hide Ingredients</button>
   </div>
   <div id="reciplePrepInstructions">
     <p><span id="instructions"></span></p>

@@ -1,0 +1,197 @@
+{
+  "name": "Chicken Parmesan",
+  "servings": 4,
+  "image": "images/chickparm.jpg",
+  "prepTime": "25 minute prep - 20 minute cook time",
+  "difficulty": "4",
+  "ingredients": [{
+      "name": "Boneless Chicken Breast Halves",
+      "quantity": 4,
+      "unit": "",
+      "optional": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 2,
+      "unit": "tsps",
+      "optional": false
+    },
+    {
+      "name": "Black Pepper",
+      "quantity": 2,
+      "unit": "tsps",
+      "optional": false
+    },
+    {
+      "name": "Eggs",
+      "quantity": 2,
+      "unit": "",
+      "optional": false
+    },
+    {
+      "name": "Panko Bread Crumbs",
+      "quantity": 1,
+      "unit": "cups",
+      "optional": false
+    },
+    {
+      "name": "Grated Parmesan Cheese",
+      "quantity": 0.5,
+      "unit": "cups",
+      "optional": false
+    },
+    {
+      "name": "All-purpose",
+      "quantity": 2,
+      "unit": "tbsps",
+      "optional": false
+    },
+    {
+      "name": "Tomato Sauce",
+      "quantity": 0.5,
+      "unit": "cups",
+      "optional": false
+    },
+    {
+      "name": "Fresh Mozzarella Cheese",
+      "quantity": 0.25,
+      "unit": "cups",
+      "optional": false
+    },
+    {
+      "name": "Chopped Fresh Basil",
+      "quantity": 0.25,
+      "unit": "cups",
+      "optional": false
+    },
+    {
+      "name": "Grated Provolone Cheese",
+      "quantity": 0.5,
+      "unit": "cups",
+      "optional": false
+    },
+    {
+      "name": "Grated Parmesan Cheese",
+      "quantity": 0.25,
+      "unit": "cups",
+      "optional": false
+    },
+    {
+      "name": "Olive Oil",
+      "quantity": 1,
+      "unit": "tbsps",
+      "optional": false
+    }
+  ],
+  "instructionsHalf": [{
+    "step": 1,
+    "instruction": "Preheat an oven to 450 degrees F (230 degrees C)."
+  },
+  {
+    "step": 2,
+    "instruction": "Place chicken breasts between two sheets of heavy plastic (resealable freezer bags work well) on a solid, level surface. Firmly pound chicken with the smooth side of a meat mallet to a thickness of 1/2-inch. Season chicken thoroughly with salt and pepper."
+  },
+  {
+    "step": 3,
+    "instruction": "Beat eggs in a shallow bowl and set aside."
+  },
+  {
+    "step": 4,
+    "instruction":"Mix bread crumbs and 1/4 cup Parmesan cheese in a separate bowl, set aside."
+  },
+  {
+    "step": 5,
+    "instruction":"Place flour in a sifter or strainer; sprinkle over chicken breasts, evenly coating both sides."
+  },
+  {
+    "step": 6,
+    "instruction":"Dip flour coated chicken breast in beaten eggs. Transfer breast to breadcrumb mixture, pressing the crumbs into both sides. Repeat for each breast. Set aside breaded chicken breasts for about 15 minutes."
+  },
+  {
+    "step": 7 ,
+    "instruction":"Heat 1/2 cup olive oil in a large skillet on medium-high heat until it begins to shimmer. Cook chicken until golden, about 2 minutes on each side. The chicken will finish cooking in the oven."
+  },
+  {
+    "step": 8,
+    "instruction":"Place chicken in a baking dish and top each breast with about 1/4 cup of tomato sauce. Layer each chicken breast with equal amounts of mozzarella cheese, fresh basil, and provolone cheese. Sprinkle 1 to 2 tablespoons of Parmesan cheese on top and drizzle with 1/2 tablespoon olive oil."
+  },
+  {
+    "step": 9,
+    "instruction":"Bake in the preheated oven until cheese is browned and bubbly, and chicken breasts are no longer pink in the center, 15 to 20 minutes. An instant-read thermometer inserted into the center should read at least 165 degrees F (74 degrees C)."
+  }
+  ],
+  "instructionsNormal": [{
+    "step": 1,
+    "instruction": "Preheat an oven to 450 degrees F (230 degrees C)."
+  },
+  {
+    "step": 2,
+    "instruction": "Place chicken breasts between two sheets of heavy plastic (resealable freezer bags work well) on a solid, level surface. Firmly pound chicken with the smooth side of a meat mallet to a thickness of 1/2-inch. Season chicken thoroughly with salt and pepper."
+  },
+  {
+    "step": 3,
+    "instruction": "Beat eggs in a shallow bowl and set aside."
+  },
+  {
+    "step": 4,
+    "instruction":"Mix bread crumbs and 1/2 cup Parmesan cheese in a separate bowl, set aside."
+  },
+  {
+    "step": 5,
+    "instruction":"Place flour in a sifter or strainer; sprinkle over chicken breasts, evenly coating both sides."
+  },
+  {
+    "step": 6,
+    "instruction":"Dip flour coated chicken breast in beaten eggs. Transfer breast to breadcrumb mixture, pressing the crumbs into both sides. Repeat for each breast. Set aside breaded chicken breasts for about 15 minutes."
+  },
+  {
+    "step": 7 ,
+    "instruction":"Heat 1 cup olive oil in a large skillet on medium-high heat until it begins to shimmer. Cook chicken until golden, about 2 minutes on each side. The chicken will finish cooking in the oven."
+  },
+  {
+    "step": 8,
+    "instruction":"Place chicken in a baking dish and top each breast with about 1/3 cup of tomato sauce. Layer each chicken breast with equal amounts of mozzarella cheese, fresh basil, and provolone cheese. Sprinkle 1 to 2 tablespoons of Parmesan cheese on top and drizzle with 1 tablespoon olive oil."
+  },
+  {
+    "step": 9,
+    "instruction":"Bake in the preheated oven until cheese is browned and bubbly, and chicken breasts are no longer pink in the center, 15 to 20 minutes. An instant-read thermometer inserted into the center should read at least 165 degrees F (74 degrees C)."
+  }
+  ],
+  "instructionsDouble": [{
+    "step": 1,
+    "instruction": "Preheat an oven to 450 degrees F (230 degrees C)."
+  },
+  {
+    "step": 2,
+    "instruction": "Place chicken breasts between two sheets of heavy plastic (resealable freezer bags work well) on a solid, level surface. Firmly pound chicken with the smooth side of a meat mallet to a thickness of 1/2-inch. Season chicken thoroughly with salt and pepper."
+  },
+  {
+    "step": 3,
+    "instruction": "Beat eggs in a shallow bowl and set aside."
+  },
+  {
+    "step": 4,
+    "instruction":"Mix bread crumbs and 1 cup Parmesan cheese in a separate bowl, set aside."
+  },
+  {
+    "step": 5,
+    "instruction":"Place flour in a sifter or strainer; sprinkle over chicken breasts, evenly coating both sides."
+  },
+  {
+    "step": 6,
+    "instruction":"Dip flour coated chicken breast in beaten eggs. Transfer breast to breadcrumb mixture, pressing the crumbs into both sides. Repeat for each breast. Set aside breaded chicken breasts for about 15 minutes."
+  },
+  {
+    "step": 7 ,
+    "instruction":"Heat 2 cup olive oil in a large skillet on medium-high heat until it begins to shimmer. Cook chicken until golden, about 2 minutes on each side. The chicken will finish cooking in the oven."
+  },
+  {
+    "step": 8,
+    "instruction":"Place chicken in a baking dish and top each breast with about 2/3 cup of tomato sauce. Layer each chicken breast with equal amounts of mozzarella cheese, fresh basil, and provolone cheese. Sprinkle 1 to 2 tablespoons of Parmesan cheese on top and drizzle with 1 tablespoon olive oil."
+  },
+  {
+    "step": 9,
+    "instruction":"Bake in the preheated oven until cheese is browned and bubbly, and chicken breasts are no longer pink in the center, 15 to 20 minutes. An instant-read thermometer inserted into the center should read at least 165 degrees F (74 degrees C)."
+  }
+  ]
+}
