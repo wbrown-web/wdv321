@@ -4,6 +4,11 @@
 <head>
   <meta charset="utf-8">
   <title>Dynamic Recipe Project</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- CSS Stylesheets -->
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <!-- JavaScript -->
   <script src="js/jquery-3.2.1.min.js"></script>
   <script>
     //*** Functionality ***//
@@ -30,7 +35,7 @@
               $("#recipeServings").html("");
               if (recipeSize == "half") {
                 //*** Adjust Serving Size ***//
-                $("#recipeServings").html(data.servings*0.5);
+                $("#recipeServings").html(data.servings * 0.5);
                 //*** Grabs The Ingredients and Halfs the Quantity***//
                 for (var i = 0; i < data.ingredients.length; i++) {
                   if (data.ingredients[i].optional === true) {
@@ -41,7 +46,7 @@
                 }
                 //*** Grabs The Half Instructions ***//
                 for (var x = 0; x < data.instructionsHalf.length; x++) {
-                  $("#instructions").append("<h4>" + "Step " + data.instructionsHalf[x].step + "</h4>" + "<p>" + data.instructionsHalf[x].instruction + "</p>");
+                  $("#instructions").append("<h6>" + "Step " + data.instructionsHalf[x].step + "</h6>" + "<p>" + data.instructionsHalf[x].instruction + "</p>");
                 }
               } else if (recipeSize == "normal") {
                 //*** Adjust Serving Size ***//
@@ -56,11 +61,11 @@
                 }
                 //*** Grabs The Normal Instructions ***//
                 for (var x = 0; x < data.instructionsNormal.length; x++) {
-                  $("#instructions").append("<h4>" + "Step " + data.instructionsNormal[x].step + "</h4>" + "<p>" + data.instructionsNormal[x].instruction + "</p>");
+                  $("#instructions").append("<h6>" + "Step " + data.instructionsNormal[x].step + "</h6>" + "<p>" + data.instructionsNormal[x].instruction + "</p>");
                 }
               } else if (recipeSize == "double") {
                 //*** Adjust Serving Size ***//
-                $("#recipeServings").html(data.servings*2);
+                $("#recipeServings").html(data.servings * 2);
                 //*** Grabs Ingredient List and Doubles the Quantity ***//
                 for (var i = 0; i < data.ingredients.length; i++) {
                   if (data.ingredients[i].optional === true) {
@@ -71,7 +76,7 @@
                 }
                 //*** Grabs The Double Instructions ***//
                 for (var x = 0; x < data.instructionsDouble.length; x++) {
-                  $("#instructions").append("<h4>" + "Step " + data.instructionsDouble[x].step + "</h4>" + "<p>" + data.instructionsDouble[x].instruction + "</p>");
+                  $("#instructions").append("<h6>" + "Step " + data.instructionsDouble[x].step + "</h6>" + "<p>" + data.instructionsDouble[x].instruction + "</p>");
                 }
               }
             });
@@ -91,7 +96,7 @@
               $("#instructions").html("");
               if (recipeSize == "half") {
                 //*** Adjust Serving Size ***//
-                $("#recipeServings").html(data.servings*0.5);
+                $("#recipeServings").html(data.servings * 0.5);
                 //*** Grabs The Ingredients and Halfs the Quantity***//
                 for (var i = 0; i < data.ingredients.length; i++) {
                   if (data.ingredients[i].optional === true) {
@@ -102,7 +107,7 @@
                 }
                 //*** Grabs The Half Instructions ***//
                 for (var x = 0; x < data.instructionsHalf.length; x++) {
-                  $("#instructions").append("<h4>" + "Step " + data.instructionsHalf[x].step + "</h4>" + "<p>" + data.instructionsHalf[x].instruction + "</p>");
+                  $("#instructions").append("<h6>" + "Step " + data.instructionsHalf[x].step + "</h6>" + "<p>" + data.instructionsHalf[x].instruction + "</p>");
                 }
               } else if (recipeSize == "normal") {
                 //*** Adjust Serving Size ***//
@@ -117,11 +122,11 @@
                 }
                 //*** Grabs The Normal Instructions ***//
                 for (var x = 0; x < data.instructionsNormal.length; x++) {
-                  $("#instructions").append("<h4>" + "Step " + data.instructionsNormal[x].step + "</h4>" + "<p>" + data.instructionsNormal[x].instruction + "</p>");
+                  $("#instructions").append("<h6>" + "Step " + data.instructionsNormal[x].step + "</h6>" + "<p>" + data.instructionsNormal[x].instruction + "</p>");
                 }
               } else if (recipeSize == "double") {
                 //*** Adjust Serving Size ***//
-                $("#recipeServings").html(data.servings*2);
+                $("#recipeServings").html(data.servings * 2);
                 //*** Grabs Ingredient List and Doubles the Quantity ***//
                 for (var i = 0; i < data.ingredients.length; i++) {
                   if (data.ingredients[i].optional === true) {
@@ -132,7 +137,7 @@
                 }
                 //*** Grabs The Double Instructions ***//
                 for (var x = 0; x < data.instructionsDouble.length; x++) {
-                  $("#instructions").append("<h4>" + "Step " + data.instructionsDouble[x].step + "</h4>" + "<p>" + data.instructionsDouble[x].instruction + "</p>");
+                  $("#instructions").append("<h6>" + "Step " + data.instructionsDouble[x].step + "</h6>" + "<p>" + data.instructionsDouble[x].instruction + "</p>");
                 }
               }
             });
@@ -152,7 +157,7 @@
               $("#instructions").html("");
               if (recipeSize == "half") {
                 //*** Adjust Serving Size ***//
-                $("#recipeServings").html(data.servings*0.5);
+                $("#recipeServings").html(data.servings * 0.5);
                 //*** Grabs The Ingredients and Halfs the Quantity***//
                 for (var i = 0; i < data.ingredients.length; i++) {
                   if (data.ingredients[i].optional === true) {
@@ -163,7 +168,7 @@
                 }
                 //*** Grabs The Half Instructions ***//
                 for (var x = 0; x < data.instructionsHalf.length; x++) {
-                  $("#instructions").append("<h4>" + "Step " + data.instructionsHalf[x].step + "</h4>" + "<p>" + data.instructionsHalf[x].instruction + "</p>");
+                  $("#instructions").append("<h6>" + "Step " + data.instructionsHalf[x].step + "</h6>" + "<p>" + data.instructionsHalf[x].instruction + "</p>");
                 }
               } else if (recipeSize == "normal") {
                 //*** Adjust Serving Size ***//
@@ -178,11 +183,11 @@
                 }
                 //*** Grabs The Normal Instructions ***//
                 for (var x = 0; x < data.instructionsNormal.length; x++) {
-                  $("#instructions").append("<h4>" + "Step " + data.instructionsNormal[x].step + "</h4>" + "<p>" + data.instructionsNormal[x].instruction + "</p>");
+                  $("#instructions").append("<h6>" + "Step " + data.instructionsNormal[x].step + "</h6>" + "<p>" + data.instructionsNormal[x].instruction + "</p>");
                 }
               } else if (recipeSize == "double") {
                 //*** Adjust Serving Size ***//
-                $("#recipeServings").html(data.servings*2);
+                $("#recipeServings").html(data.servings * 2);
                 //*** Grabs Ingredient List and Doubles the Quantity ***//
                 for (var i = 0; i < data.ingredients.length; i++) {
                   if (data.ingredients[i].optional === true) {
@@ -193,7 +198,7 @@
                 }
                 //*** Grabs The Double Instructions ***//
                 for (var x = 0; x < data.instructionsDouble.length; x++) {
-                  $("#instructions").append("<h4>" + "Step " + data.instructionsDouble[x].step + "</h4>" + "<p>" + data.instructionsDouble[x].instruction + "</p>");
+                  $("#instructions").append("<h6>" + "Step " + data.instructionsDouble[x].step + "</h6>" + "<p>" + data.instructionsDouble[x].instruction + "</p>");
                 }
               }
             });
@@ -207,26 +212,50 @@
     function showIngredients() {
       $("#recipeIngredients").show();
       $("#ingredientShow").hide();
+      $("#ingredientHide").show();
     }
 
     function hideIngredients() {
       $("#recipeIngredients").hide();
       $("#ingredientShow").show();
+      $("#ingredientHide").hide();
     }
 
     //*** Instructions Show and Hide ***//
     function showInstructions() {
       $("#reciplePrepInstructions").show();
       $("#instructShow").hide();
+      $("#instructHide").show();
     }
 
     function hideInstructions() {
       $("#reciplePrepInstructions").hide();
       $("#instructShow").show();
+      $("#instructHide").hide();
     }
   </script>
   <style>
-    #recipeCard {}
+    body {
+      background-color: #fffef7;
+      font-family: 'Open Sans', sans-serif;
+    }
+
+
+    h1 {
+      color: #e16120;
+      text-decoration: underline;
+      font-weight: bold;
+    }
+    h3 {
+      text-decoration: underline;
+    }
+    h6 {
+      font-weight: bold;
+      text-decoration: underline;
+      background-color: #bac626;
+    }
+
+    /* Hide Content From Page Load */
 
     #recipeIngredients {
       display: none;
@@ -235,49 +264,182 @@
     #reciplePrepInstructions {
       display: none;
     }
+
+    #instructHide,
+    #ingredientHide {
+      display: none;
+    }
+
+
+
+    /* Top Formatting */
+    #topContent {
+      border: 2px solid #000000;
+    }
+    #recipeList a {
+      color: #e16120;
+      font-size: 2em;
+    }
+    #recipeImage {
+        box-shadow: 3px 3px 5px 3px #000000;
+    }
+
+    #recipeList,
+    #recipeHeading {
+      background-color: #bac626;
+    }
+
+    #recipeHeading {
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    #icons {
+      margin-top: 20px;
+      font-size: 24px;
+      font-weight: bold;
+      text-align: center;
+      border-bottom: 1px solid #000000;
+    }
+
+    #secondIconRow {
+      text-align: center;
+      margin-top: 0;
+      font-size: 18px;
+    }
+
+    #servingNumber,
+    #timeNumber {
+      border-right: 1px solid #000000;
+    }
+
+    #recipeServings,
+    #recipePrepTime,
+    #recipeDifficulty {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    #recipeServings p,
+    #recipePrepTime p {
+      color: #bac626;
+    }
+
+    /* Bottom Formatting */
+    #recipeIngredients h3,
+    #reciplePrepInstructions h3{
+      text-decoration: underline;
+      color: #e16120;
+    }
+
+    /* Top and Bottom Divs */
+
+    #topContent,
+    #bottomContent {
+      background-color: #fafafa;
+    }
+
+
+
   </style>
 </head>
-</body>
-<p>Recipe List</p>
-<p>
-  <select name="recipes" id="recipes">
+<body>
+<div class="container">
+  <div class="container" id="topContent">
+    <div class="row">
+      <div class="col-lg-6 col-md-12" id="recipeList">
+        <h1>Mouth Watering Delights</h1>
+        <p>
+          <select name="recipes" id="recipes">
     <option value="select">Select A Recipe</option>
     <option value="crockpotChili">Crockpot Chili</option>
     <option value="fettuccini">Fettuccini Alfredo</option>
     <option value="chickenParm">Chicken Parmesan</option>
   </select>
-</p>
-<div id="recipeCard">
-  <div id="recipeHeading">
-    <h1><span id="recipeName"></span></h1>
-    <img src="" id="recipeImage">
-    <p>Servings: <span id="recipeServings"></span></p>
-    <p>Avg prep/cooking time: <span id="recipePrepTime"></span></p>
-    <p>Recipe Difficulty: <span id="recipeDifficulty"></span></p>
-    <button id="ingredientShow" onclick="showIngredients()">Show Ingredients</button>
-    <button id="instructShow" onclick="showInstructions()">Show Preparation</button>
-  </div>
-  <div id="recipeIngredients">
-    <h3>Select Recipe Size</h3>
-    <p>
-      <input type="radio" name="recipeSizeSelect" value="half" id="halfRecipeSelect">
-      <label for="halfRecipeSelect">Half Recipe</label>
-      <input type="radio" name="recipeSizeSelect" value="normal" id="normalRecipeSelect">
-      <label for="normalRecipeSelect">Normal Recipe</label>
-      <input type="radio" name="recipeSizeSelect" value="double" id="doubleRecipeSelect">
-      <label for="doubleRecipeSelect">Double Recipe</label>
-    </p>
-    <p>
-      <ul><span id="ingredients"></span></ul>
-    </p>
-    <button id="ingredientHide" onclick="hideIngredients()">Hide Ingredients</button>
-  </div>
-  <div id="reciplePrepInstructions">
-    <p><span id="instructions"></span></p>
-    <button id="instructHide" onclick="hideInstructions()">Hide Preparation</button>
-  </div>
-</div>
+        </p>
+        <h3>Select Recipe Size</h3>
+        <p>
+          <input type="radio" name="recipeSizeSelect" value="half" id="halfRecipeSelect">
+          <label for="halfRecipeSelect">Half Recipe</label>
+          <input type="radio" name="recipeSizeSelect" value="normal" id="normalRecipeSelect">
+          <label for="normalRecipeSelect">Normal Recipe</label>
+          <input type="radio" name="recipeSizeSelect" value="double" id="doubleRecipeSelect">
+          <label for="doubleRecipeSelect">Double Recipe</label>
+        </p>
+        <br>
+        <p>If you have been looking all around for the best recipes to share with your family and friends you have come to the right spot!</p>
+        <p>Just choose one of our saviory recipes then select your recipe size!</p>
+        <br>
+        <br>
+        <p>
+          <a href="#" id="ingredientShow" onclick="showIngredients()">&#8681;Ingredients&#8681;</a>
+          <a href="#" id="ingredientHide" onclick="hideIngredients()">&#8679;Ingredients&#8679;</a>
+          <a href="#" id="instructShow" onclick="showInstructions()">&#8681;Preparation&#8681;</a>
+          <a href="#" id="instructHide" onclick="hideInstructions()">&#8679;Preparation&#8679;</a>
 
-<body>
+        </p>
+      </div>
+      <!-- recipeList end -->
+      <div class="col-lg-6 col-md-12" id="recipeHeading">
+        <h1><span id="recipeName"></span></h1>
+        <img src="" id="recipeImage">
+        <div class="row" id="icons">
+          <div class="col-lg-4">
+            <img src="images/servingsIcon.gif">
+            <p>Servings</p>
+          </div>
+          <div class="col-lg-4">
+            <img src="images/timeIcon.gif">
+            <p>Prep/Cooking Time</p>
+          </div>
+          <div class="col-lg-4">
+            <img src="images/difficultyIcon.gif">
+            <p>Difficulty</p>
+          </div>
+        </div>
+        <!-- Row Icons end -->
+        <div class="row" id="secondIconRow">
+        <div class="col-lg-4" id="servingNumber">
+          <!--  Servings -->
+          <p><span id="recipeServings"></span></p>
+        </div>
+        <!-- Servings End -->
+        <div class="col-lg-4" id="timeNumber">
+          <!-- Cook Time -->
+          <p><span id="recipePrepTime"></span></p>
+        </div>
+        <!-- Cook Time End -->
+        <div class="col-lg-4" id="difficultyNumber">
+          <!-- Difficulty -->
+          <p><span id="recipeDifficulty"></span></p>
+        </div>
+        <!-- Difficulty End -->
+      </div>
+      <!-- Second Row End -->
+      </div>
+      <!-- recipeHeading end -->
+    </div>
+    <!-- row end -->
+  </div>
+  <!-- topContent end -->
+  <div class="container" id="bottomContent">
+    <div class="row">
+      <div class="col-lg-6 col-md-12" id="recipeIngredients">
+      <h3>Ingredients</h3>
+          <ul><span id="ingredients"></span></ul>
+      </div>
+      <div class="col-lg-6 col-md-12" id="reciplePrepInstructions">
+        <h3>Directions</h3>
+        <p><span id="instructions"></span></p>
+      </div>
+    </div>
+    <!-- row end -->
+  </div>
+  <!-- bottomContent end -->
+</div>
+<!-- Container End -->
+
+</body>
 
 </html>
